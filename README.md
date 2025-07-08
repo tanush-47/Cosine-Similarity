@@ -1,30 +1,37 @@
+# Cosine Similarity
 
-# Cosine Similarity - Single File Version
+This Python project demonstrates how to compute the **cosine similarity** between two text documents using **TF-IDF (Term Frequency–Inverse Document Frequency)** vectorization. Cosine similarity is a measure used to determine how similar two texts are, regardless of their size.
 
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+## 🔍 What is Cosine Similarity?
 
-def calculate_cosine_similarity(text1, text2):
-    # Create the TF-IDF vectorizer
-    vectorizer = TfidfVectorizer()
+Cosine similarity calculates the cosine of the angle between two non-zero vectors in an inner product space. It is widely used in text analysis and NLP for comparing document similarity.
 
-    # Transform the texts into TF-IDF vectors
-    tfidf_matrix = vectorizer.fit_transform([text1, text2])
+The similarity score ranges from:
+- `1` → documents are **exactly similar**
+- `0` → documents are **completely dissimilar**
 
-    # Compute the cosine similarity
-    similarity = cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:2])
+## 📂 Project Structure
 
-    return similarity[0][0]
+Cosine-Similarity/
+├── cosine_similarity.py # Main script for calculating cosine similarity
+├── requirements.txt # Python dependencies
+└── README.md # Project documentation
 
-if __name__ == "__main__":
-    print("=== Cosine Similarity Calculator ===")
-    
-    # Example input texts
-    text1 = input("Enter first text: ")
-    text2 = input("Enter second text: ")
 
-    # Calculate similarity
-    result = calculate_cosine_similarity(text1, text2)
-    
-    # Display result
-    print(f"\nCosine Similarity: {result:.4f}")
+## 🧠 How It Works
+
+1. Takes two input text documents (strings).
+2. Uses `TfidfVectorizer` from `sklearn` to convert text into vector form.
+3. Calculates cosine similarity using `cosine_similarity()` function.
+
+## 🚀 Getting Started
+
+### ✅ Prerequisites
+
+- Python 3.6+
+- pip
+
+### 📦 Install Dependencies
+
+```bash
+pip install -r requirements.txt
