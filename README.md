@@ -13,8 +13,11 @@ The similarity score ranges from:
 ## 📂 Project Structure
 
 Cosine-Similarity/
+
 ├── cosine_similarity.py # Main script for calculating cosine similarity
+
 ├── requirements.txt # Python dependencies
+
 └── README.md # Project documentation
 
 
